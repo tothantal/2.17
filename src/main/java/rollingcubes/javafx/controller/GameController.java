@@ -137,7 +137,7 @@ public class GameController {
         }
     }
 
-    private void handleSolved(ObservableValue observableValue, boolean oldValue, boolean newValue) {
+    private void handleSolved(ObservableValue<? extends Boolean> observableValue, boolean oldValue, boolean newValue) {
         if (newValue) {
             Logger.info("Player {} has solved the game in {} steps", playerName, steps.get());
             stopwatch.stop();
