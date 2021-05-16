@@ -113,7 +113,13 @@ public class BoardController {
 
 		if (controller.getGameBoard().isOrdered()) {
 			try {
-				controller.getGame().getScore().saveScores();
+
+				File XMLFile = new File("score.xml");
+				if (!XMLFile.exists()) {
+					controller.getGame().getScore().toXML();
+				} else {
+					controller.getGame().getScore().saveScores();
+				}
 
 				FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/score.fxml"));
 				Parent root = loader.load();
