@@ -1,5 +1,7 @@
 package boardgame.model;
 
+import org.tinylog.Logger;
+
 import javax.xml.bind.JAXBException;
 
 /**
@@ -31,7 +33,7 @@ public class Game {
 
     /**
      * Sets the current score and name of the player
-     * @param	the	current score and name of the player
+     * @param score   the current score and name of the player
      */
     public void setScore(Highscore score) {
         this.score = score;
@@ -59,7 +61,7 @@ public class Game {
 
     /**
      * Sets the {@code Player}
-     * @param 	the new {@code Player}
+     * @param 	player  the new {@code Player}
      */
     public void setPlayer(Player player) {
         this.player = player;
@@ -78,7 +80,7 @@ public class Game {
     /**
      * Sets the game board
      *
-     * @param 	the new {@code Board}
+     * @param 	board   the new {@code Board}
      */
     public void setBoard(Board board) {
         this.board = board;
@@ -98,7 +100,7 @@ public class Game {
     /**
      * Sets the current {@code Position}
      *
-     * @param 	the new {@code Position}
+     * @param 	position    the new {@code Position}
      */
     public void setPosition(Position position) {
         this.position = position;
@@ -148,8 +150,14 @@ public class Game {
     }
 
 
-
+    /**
+     * Moves the value from one {@code Tile} to the other
+     * @param one   The first {@code Tile}
+     * @param other The second {@code Tile}
+     */
     public void moveTiles(Tile one, Tile other) {
+
+        Logger.info("Moving values...");
 
         Direction direction = Direction.NONE;
 
