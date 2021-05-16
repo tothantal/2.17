@@ -30,12 +30,18 @@
     <scm>
         <developerConnection>scm:git:https://github.com/tothantal/2.17.git</developerConnection>
     </scm>
+    <distributionManagement>
+        <site>
+            <id>shrek</id>
+            <url>scp://@shrek.unideb.hu:2222/home/tothantal/public_html/${project.artifactId}}</url>
+        </site>
+    </distributionManagement>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
-        <maven.compiler.release>16</maven.compiler.release>
+        <maven.compiler.release>15</maven.compiler.release>
         <exec.mainClass>2.17.javafx.Main</exec.mainClass>
-        <javafx.version>16</javafx.version>
+        <javafx.version>15</javafx.version>
         <junit.jupiter.version>5.7.1</junit.jupiter.version>
         <jacoco.version>0.8.7</jacoco.version>
         <surefire.version>3.0.0-M5</surefire.version>
@@ -204,7 +210,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.0.0</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
