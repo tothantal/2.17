@@ -3,7 +3,6 @@ package boardgame;
 import boardgame.model.Board;
 import boardgame.model.Direction;
 import boardgame.model.Game;
-import boardgame.model.Highscore;
 import boardgame.model.Position;
 import boardgame.model.Tile;
 
