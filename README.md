@@ -1,6 +1,13 @@
-rolling-cubes
-=============
+# Homework-Project
 
-Puzzle game implemented in [JavaFX](https://openjfx.io/) based on the Model-View-Controller (MVC) architectural pattern.
+## 2.17. Feladat
 
-Game results are stored in a [H2](https://www.h2database.com/) database with [Hibernate ORM](https://hibernate.org/orm/).
+Az ábrán látható táblán kilenc darab számozott lapocskát helyezünk el.
+Minden egyes lapocskát el lehet tolni egy négyszomszédos üres pozícióra. 
+Feladatunk a lapocskák sorrendbe rendezése: az 1 számút eljuttatni a legbaloldalibb 
+pozícióra, miközben az összes többi lapocskát visszajuttatjuk eredeti helyére.
+
+
+<p align="center">
+  <img src="https://github.com/tothantal/Homework-Project/blob/master/src/main/resources/2-17-feladat.png">
+</p>
