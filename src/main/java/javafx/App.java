@@ -21,6 +21,7 @@ public class App extends Application {
 
         scene = new Scene(loadFXML("/fxml/menu"));
         stage.setScene(scene);
+        stage.setTitle("Main Menu");
         stage.show();
     }
 

@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import boardgame.model.Direction;
 import boardgame.model.Game;
+import boardgame.model.Highscore;
+import boardgame.model.Player;
 import boardgame.model.Position;
 
 

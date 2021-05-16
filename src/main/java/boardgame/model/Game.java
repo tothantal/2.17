@@ -3,7 +3,6 @@ package boardgame.model;
 import javax.xml.bind.JAXBException;
 
 /**
- * The Model part of the MVC architecture
  * The Game Data is represented by this object
  */
 public class Game {
@@ -147,29 +146,29 @@ public class Game {
         this.getPlayer().increaseMoves();
         return this.getBoard().isOrdered();
     }
-    
-    
-    
+
+
+
     public void moveTiles(Tile one, Tile other) {
 
-    	Direction direction = Direction.NONE;
-    	
-    	if (other.getPosition().getRow() > one.getPosition().getRow()) {
-    		direction = Direction.UP;
-    	}
-    	
-    	if (other.getPosition().getRow() < one.getPosition().getRow()) {
-    		direction = Direction.DOWN;
-    	}
-    	
-    	if (other.getPosition().getColumn() > one.getPosition().getColumn()) {
-    		direction = Direction.RIGHT;
-    	}
-    	
-    	if (other.getPosition().getRow() > one.getPosition().getRow()) {
-    		direction = Direction.LEFT;
-    	}
-    	
+        Direction direction = Direction.NONE;
+
+        if (other.getPosition().getRow() > one.getPosition().getRow()) {
+            direction = Direction.UP;
+        }
+
+        if (other.getPosition().getRow() < one.getPosition().getRow()) {
+            direction = Direction.DOWN;
+        }
+
+        if (other.getPosition().getColumn() > one.getPosition().getColumn()) {
+            direction = Direction.RIGHT;
+        }
+
+        if (other.getPosition().getRow() > one.getPosition().getRow()) {
+            direction = Direction.LEFT;
+        }
+
         this.getBoard().move(one.getPosition(), direction);
     }
 }

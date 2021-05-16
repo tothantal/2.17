@@ -15,11 +15,9 @@ import javax.xml.bind.JAXBException;
 public class GameController {
 
     private final Game game;
-    private Highscore scores;
-    
+
     public GameController(Game game) {
         this.game = game;
-        this.setScores(new Highscore(game.getPlayer()));
     }
 
 
@@ -119,33 +117,24 @@ public class GameController {
     public boolean moveTowards(Direction direction) {
         return game.moveTowards(direction);
     }
-    
+
     public Game getGame() {
-    	return this.game;
+        return this.game;
     }
-    
+
     public Board getGameBoard() {
-    	return this.getGame().getBoard();
+        return this.getGame().getBoard();
     }
-    
+
     public void moveTiles(Tile one, Tile other) {
-    	
-    	if (one.getValue() == 0 && other.getValue() != 0) {
-    		Tile helper = one;
-    		one = other;
-    		other = helper;
-    	}
-    	
-    	this.getGameBoard().move(one, other);
+
+        if (one.getValue() == 0 && other.getValue() != 0) {
+            Tile helper = one;
+            one = other;
+            other = helper;
+        }
+
+        this.getGameBoard().move(one, other);
+        this.increasePlayerMoves();
     }
-
-
-	public Highscore getScores() {
-		return scores;
-	}
-
-
-	public void setScores(Highscore scores) {
-		this.scores = scores;
-	}
 }
