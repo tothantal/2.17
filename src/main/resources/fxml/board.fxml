@@ -37,6 +37,5 @@
       <Button fx:id="tile19" mnemonicParsing="false" onAction="#markTile19" prefHeight="75.0" prefWidth="58.0" text="1" GridPane.columnIndex="9" GridPane.rowIndex="1" />
       <Button fx:id="tile05" mnemonicParsing="false" onAction="#markTile05" prefHeight="75.0" prefWidth="58.0" GridPane.columnIndex="5" />
       <Button fx:id="tile07" mnemonicParsing="false" onAction="#markTile07" prefHeight="75.0" prefWidth="58.0" GridPane.columnIndex="7" />
-      <ToggleButton fx:id="score" mnemonicParsing="false" onAction="#showScore" prefHeight="25.0" prefWidth="78.0" text="Score" />
    </children>
 </GridPane>
