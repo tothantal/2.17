@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -44,6 +45,9 @@ public class MainMenuController {
 			stage.setTitle("Board");
 			stage.show();
 
+		} else {
+			nameLabel.setText("Please enter your name!");
+			nameLabel.setTextFill(Color.RED);
 		}
 
 
