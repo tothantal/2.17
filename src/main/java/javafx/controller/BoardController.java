@@ -78,7 +78,7 @@ public class BoardController {
 		}
 
 		for (Tile tile : controller.getGameBoard().getFirstRow()) {
-			if (tile.isMarked()) {
+			if (tile.isMarked() && this.markedTile1 != tile) {
 				if (this.markedTile1 != null && markedTile2 == null) {
 					this.markedTile2 = tile;
 				} else {
@@ -88,7 +88,7 @@ public class BoardController {
 		}
 
 		for (Tile tile : controller.getGameBoard().getSecondRow()) {
-			if (tile.isMarked()) {
+			if (tile.isMarked() && this.markedTile1 != tile) {
 				if (this.markedTile1 != null && markedTile2 == null) {
 					this.markedTile2 = tile;
 				} else {
@@ -278,5 +278,4 @@ public class BoardController {
 		setTile(tile19, new Position(1, 9));
 		updateBoard();
 	}
-
 }
