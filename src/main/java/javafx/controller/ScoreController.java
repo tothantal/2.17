@@ -20,15 +20,13 @@ public class ScoreController {
 	@FXML
 	private void initialize() throws IOException, JAXBException {
 
-		File XMLFile = new File("score.xml");
+		File XMLFile = new File("scores.xml");
 		if (!XMLFile.exists()) {
-			XMLFile.createNewFile();
 			this.scoreText.setText("No scores yet");
+		} else {
+			this.scores.fromXML();
+			this.scoreText.setText(scores.toString());
 		}
-
-		this.scores.fromXML();
-		this.scoreText.setText(scores.toString());
-
 	}
 
 }
