@@ -113,7 +113,7 @@ public class BoardController {
 		if (controller.getGameBoard().isOrdered()) {
 			try {
 
-				File XMLFile = new File("score.xml");
+				File XMLFile = new File("scores.xml");
 				if (!XMLFile.exists()) {
 					controller.getGame().getScore().toXML();
 				} else {
