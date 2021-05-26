@@ -9,7 +9,7 @@
     <description>
         A simple logic game. Numbers are arranged from 2 to 9 in a row, and a 1 after. (See image in readme.md)
         Each number can be moved into an empty position, and there are empty position above
-        the 4., 6. and 7. numbers.
+        the 4., 6. and 7. positions.
         The goal is to get the number 1 into the first position and everything else back into its
         original position.
     </description>
@@ -21,7 +21,7 @@
             <organizationUrl>https://inf.unideb.hu/</organizationUrl>
         </developer>
         <developer>
-            <name>Tóth Antal</name>
+            <name>Antal Tóth</name>
             <email>tothantal0326@gmail.com</email>
             <organization>Faculty of Informatics, University of Debrecen</organization>
             <organizationUrl>https://inf.unideb.hu/</organizationUrl>
