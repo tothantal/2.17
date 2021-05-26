@@ -66,9 +66,9 @@ public class HighscoreTest {
     @Test
     public void testOrder() {
 
-        highscore.getScores().get(1).increaseMoves();
-        highscore.getScores().get(0).increaseMoves();
-        highscore.getScores().get(0).increaseMoves();
+        highscore.getScores().get(0).setMoves(120);
+        highscore.getScores().get(1).setMoves(110);
+        highscore.getScores().get(2).setMoves(100);
 
         highscore.order();
 
@@ -114,12 +114,9 @@ public class HighscoreTest {
         this.highscore.toXML();
         this.highscore.saveScores();
 
-        player3.increaseMoves();
-        player2.increaseMoves();
-        player2.increaseMoves();
-        player1.increaseMoves();
-        player1.increaseMoves();
-        player1.increaseMoves();
+        player1.setMoves(120);
+        player2.setMoves(110);
+        player3.setMoves(100);
 
         testScore.add(player3);
         testScore.add(player2);
@@ -128,8 +125,7 @@ public class HighscoreTest {
         this.highscore.saveScores();
         testScore = new ArrayList<>();
 
-        testPlayer.increaseMoves();
-        testPlayer.increaseMoves();
+        testPlayer.setMoves(110);
         testScore.add(testPlayer);
         this.highscore.setScores(testScore);
         this.highscore.saveScores();
